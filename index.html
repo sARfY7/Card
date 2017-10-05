@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Card</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/card.css">
+    <script src="https://use.fontawesome.com/41be7361c0.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/card.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container1">
+      <div class="card" id="card1">
+        <img src="img/visa.png" alt="VISA Logo" id="visa">
+        <img src="img/chip.png" alt="Chip" id="chip">
+        <p class="" id="card-number"></p>
+        <p id="cardholder-name"></p>
+        <p id="card-expiry"></p>
+      </div>
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" id="col1">
+
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" id="col2">
+            <form>
+              <p class="h4" id="card-heading">Payment Details</p>
+              <div class="form-group">
+                <label for="Cardnumber" class="card-label" id="label1">Card Number</label>
+                <input type="text" id="Cardnumber" maxlength="19" onfocus="document.getElementById('label1').style.color = '#3399FF' ;" onblur="document.getElementById('label1').style.color = '#999999' ;" class="card-input" onkeyup="card_number()" onchange="this.onkeyup()" onpaste="this.onkeyup()" oninput="this.onkeyup()" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="Cardholder" class="card-label" id="label2">Cardholder Name</label>
+                <input type="text" id="Cardholder" class="card-input" onfocus="document.getElementById('label2').style.color = '#3399FF' ;" onblur="document.getElementById('label2').style.color = '#999999' ;" onkeyup="card_name()" onchange="this.onkeyup()" onpaste="this.onkeyup()" oninput="this.onkeyup()" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="Expdate" class="card-label" id="label3">Expiry Date</label>
+                <label for="CVV" class="card-label" id="cvv-label">CVV</label>
+                <input type="text" id="Expdate" maxlength="5" class="card-input" onfocus="document.getElementById('label3').style.color = '#3399FF' ;" onblur="document.getElementById('label3').style.color = '#999999' ;" onkeyup="exp_date()" onchange="this.onkeyup()" onpaste="this.onkeyup()" oninput="this.onkeyup()" autocomplete="off">
+                <input type="text" id="CVV" maxlength="3" class="card-input" onfocus="document.getElementById('cvv-label').style.color = '#3399FF' ;" onblur="document.getElementById('cvv-label').style.color = '#999999' ;">
+              </div>
+              <button type="button" id="pay">Pay $159.99 <i class="fa fa-money" aria-hidden="true" id="money-icon"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+  </body>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</html>
